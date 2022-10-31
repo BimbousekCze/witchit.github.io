@@ -1,1 +1,672 @@
-super
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>Witch It 🧙🧹</title>
+    <meta charset="utf-8">
+    <style>
+        * {
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+            scroll-margin: 10px;
+        }
+
+        body {
+            background-color: #010113;
+            margin: 0;
+        }
+
+        .celek {
+            background-color: #010113;
+            width: 100%;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .witchit {
+            display: block;
+            width: 60%;
+            margin: auto;
+        }
+
+        .menu {
+            top: -90px;
+            transition: 0.5s;
+            background-color: rgb(250, 110, 255);
+            width: 100%;
+            height: 100px;
+            padding: 10px;
+            float: left;
+            position: fixed;
+            border-radius: 0 0 10px 10px;
+            opacity: 75%;
+        }
+
+        .menu:hover {
+            top: 0;
+        }
+
+        .menuButton {
+            text-align: center;
+            width: 16.6666666%;
+            padding: 20px;
+            background-color: rgb(95, 0, 107);
+            border: 2px solid black;
+            border-radius: 7px;
+            cursor: pointer;
+            transition: 1s;
+            color: cyan;
+            float: left;
+            font-weight: bold;
+            max-height: 80px;
+        }
+
+        .menuButton:hover {
+            background-color: purple;
+            transform: scale(0.95);
+        }
+
+        .obsah {
+            text-align: justify;
+            background-color: rgb(90, 48, 114);
+            width: 100%;
+            padding: 25px;
+            float: right;
+            color: #61ffe5;
+            border: 2px dashed lime;
+            border-radius: 10px;
+            font-size: 20px;
+        }
+
+        .ruby {
+            color: rgb(255, 79, 123);
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        h2 {
+            text-decoration: underline;
+        }
+
+        .podmenu {
+            height: 80px;
+        }
+
+        .modes {
+            transition: 0.5s;
+            padding: 11px;
+        }
+
+        .pulka {
+            width: 50%;
+            float: left;
+            padding: 20px;
+            text-align: center;
+            transition: 0s;
+        }
+
+        .pulka2 {
+            width: 50%;
+            float: left;
+            padding: 20px;
+        }
+
+        .margin {
+            display: block;
+            margin: auto;
+            text-align: center;
+        }
+
+        .abox {
+            opacity: 100%;
+        }
+
+        .abox1 {
+            position: absolute;
+            visibility: hidden;
+            border-radius: 10px;
+        }
+
+        .abox:hover~.abox1 {
+            visibility: visible;
+        }
+
+        .abox1:hover {
+            visibility: visible;
+        }
+
+        .oo {
+            transition: 0.5s;
+            opacity: 100%;
+        }
+
+        .qq {
+            color: rgb(231, 169, 53);
+        }
+
+        .rr {
+            color: rgb(30, 0, 54);
+        }
+
+        .ctvrt {
+            width: 25%;
+            text-align: center;
+            float: left;
+            border: 2px solid #4f2b64;
+            border-radius: 10px;
+        }
+
+        .pp {
+            border: 2px solid #4f2b64;
+            border-radius: 10px;
+        }
+
+
+        .ss {
+            transition: 0.5s;
+            opacity: 100%;
+        }
+
+        .tt {
+            right: 100px;
+        }
+
+        .uu {
+            left: 100px;
+        }
+
+        @media only screen and (max-width: 1560px) {
+            .pulka2 {
+                width: 100%;
+                left: 50%;
+            }
+
+        }
+
+        @media only screen and (max-width: 800px) {
+            .oo {
+                transition: 0s;
+                width: 95%;
+            }
+
+            .pulka {
+                transition: 0.5s;
+                width: 100%;
+            }
+
+            .abox1 {
+                left: 0;
+            }
+        }
+
+        @media only screen and (max-width: 700px) {
+            .oo {
+                transition: 0.5s;
+                height: 300px;
+            }
+
+            .menu {
+                top: 0;
+                transition: 0.5s;
+                left: -110px;
+                height: 100%;
+                width: 120px;
+                background-color: rgb(250, 110, 255);
+                opacity: 75%;
+                border-radius: 0 10px 10px 0;
+            }
+
+            .menu:hover {
+                transition: 0.5s;
+                left: 0;
+            }
+
+            .menuButton {
+                padding: 10px;
+                transition: 0s;
+                width: 100px;
+                height: 16%;
+                line-height: 20px;
+            }
+
+            * {
+                scroll-margin: 0px;
+            }
+
+            .ss {
+                transition: 0.5s;
+                padding-top: 25px;
+            }
+
+            .modes {
+                transition: 0.5s;
+                padding-top: 20px;
+            }
+
+        }
+
+        @media only screen and (max-height:400px) {
+            .ss {
+                transition: 0.5s;
+                padding: 0;
+            }
+
+            .modes {
+                transition: 0.5s;
+                padding: 0;
+            }
+        }
+
+        @media only screen and (max-height:190px) {
+            .ss {
+                transition: 0.5s;
+                visibility: hidden;
+            }
+
+            .modes {
+                transition: 0.5s;
+                visibility: hidden;
+            }
+
+            .menu {
+                transition: 0.5s;
+                visibility: hidden;
+            }
+        }
+
+        @media only screen and (max-width: 550px) {
+            .oo {
+                transition: 0.5s;
+                height: 230px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="celek">
+        <div class="menu">
+            <a href="#uvod">
+                <div class="menuButton ss">Úvod</div>
+            </a>
+            <a href="#hunter">
+                <div class="menuButton ss">Hunter</div>
+            </a>
+            <a href="#witch">
+                <div class="menuButton ss">Witch</div>
+            </a>
+            <a href="#gamemodes">
+                <div class="menuButton modes">Herní <br> módy</div>
+            </a>
+            <a href="#mapy">
+                <div class="menuButton ss">Mapy</div>
+            </a>
+            <a href="#4">
+                <div class="menuButton ss">Kosmetika</div>
+            </a>
+        </div>
+        <img src="obrázky/witchit_logo.jpg" class="witchit">
+        <div id="uvod" class="obsah">
+            <h2>Úvodní info o hře</h2>
+            Witch It je počítačová hra vyvinutá německým vývojářem <a href="https://barrelrollgames.com/" class="ruby"
+                target="_blank"> Barrel Roll Games </a> a
+            vydavatelstvím Daedalic Entertainment sídlícím v Hamburku. Hra byla původně vydána v roce 2017 v
+            Předběžném přístupu a jako plná verze byla vydána pro Microsoft Windows 22. října 2020. Hra je založena na
+            herním konceptu schovávané (Hide'n'Seek).Hra byla nejspíše napsána v C++ (ale to jsem nenašel, jen odhaduji
+            z toho, že to je v Unreal Enginu).<br> Hra se hraje v režimu Multiplayer (pro více hráčů), maximální počet
+            hráčů na serveru je 16. Na výběr je z 58 oficiálních serverů v Americe (US), Evropě (EU), Asii (HK)
+            (dohromady 174 + neoficiální servery). Ve hře je 93 <a
+                href="https://steamcommunity.com/stats/559650/achievements" class="ruby" target="_blank">achievmentů
+                (úspěchů)</a> , většina z nich jsou dosažení určitého levelu, ale jsou tam
+            i nějaké zákeřnosti. <br>
+            <div class="pulka2">
+                Ve hře jsou i úkoly (Questy), a to denní i týdenní. Za splnění těchto úkolů hráč dostane určitou
+                odměnu: <br><img src="obrázky/Questy.png"><br>
+            </div>
+            <div class="pulka2"> <b> Vítejte ve Witch It!: </b><br>
+                <iframe src="https://www.youtube.com/embed/uUMI4uAWOfE" frameborder="0" height="405" width="720"
+                    class="oo"></iframe>
+                <br><br><br><br><br><br>
+
+            </div>
+
+            <br> Jsou zde 2 role (+ Spectator, ale ten jen sleduje hru):
+            <ul>
+                <li><a href="#hunter" class="ruby"> Hunter (Lovec)</a></li>
+                <li><a href="#witch" class="ruby"> Witch (Schovávající se)</a></li>
+            </ul>
+
+        </div>
+        <div id="hunter" class="obsah qq">
+            <h2>Hunter</h2>
+            Je lovec, který má za úkol najít a chytit všechny čarodějnice. Lovec může střílet brambory, které dávají 7
+            dmg a dýku, která normálně dává 7 dmg a 2x tolik (14 dmg), když je nabitá.<br>
+            <div class="pulka">
+                <h3 class="margin">Slepice</h3>
+                <img src="obrázky/Slepice.png" class="margin abox">
+                <video width="450" height="253" controls class="abox1 uu" loop>
+                    <source src="videa/Slepice.mp4" type="video/mp4">
+                </video>
+                <ul>
+                    <li>Cooldown: 10s</li>
+                </ul>
+                Vyhoď svou slepici. Slepice začne houkat a křičet, když ve vzdálenosti 6,4 metrů bude čarodějnice. Po 10
+                vteřinách slepice zmizí.
+            </div>
+            <div class="pulka">
+                <h3 class="margin">Vysavač</h3>
+                <img src="obrázky/Vysavač.png" class="margin abox">
+                <video width="450" height="253" controls class="abox1 tt" loop>
+                    <source src="videa/Vysavač.mp4" type="video/mp4">
+                </video>
+                <ul>
+                    <li>Cooldown: 8s</li>
+                </ul>
+                Vyhoď vysavač, abys odhalil čarodějnice. Čarodějnice odhalí, až když přistane na zem mebo se dotkne zdi.
+                Není však stejný, jako slepice, protože k funkci odhalování, může brát manu odhaleným čarodějnicím(20
+                many/s po dobu tří vteřin). Čarodějnice jsou ještě k tomu zpomalené.
+            </div>
+
+            <div class="pulka">
+                <h3 class="margin">Hook</h3>
+                <img src="obrázky/Hook.png" class="margin abox">
+                <video width="450" height="253" controls class="abox1 uu" loop>
+                    <source src="videa/Hook.mp4" type="video/mp4">
+                </video>
+                <ul>
+                    <li>Cooldown: 5s</li>
+                    <li>Damage: 12</li>
+                </ul>
+                Použij hák, aby ses dostal na vysoká místa na mapě. Prostě Hook, nic speciálního :D
+            </div>
+            <div class="pulka">
+                <h3 class="margin">Body Slam (Placák)</h3>
+                <img src="obrázky/Slam.png" class="margin abox">
+                <video width="450" height="253" controls class="abox1 tt" loop>
+                    <source src="videa/Slam.mp4" type="video/mp4">
+                </video>
+                <ul>
+                    <li>Cooldown: 2s</li>
+                    <li>Damage: 4 - 32</li>
+                </ul>
+                Použij placák, abys ubral čarodějnicím životy. Z čím větší výšky skočíš, tím větší bude damage i
+                vzdálenost, ve které ho ubereš. Pokud máš tuto schopnost, tak máš permanentně větší skoky a lepší pohyb
+                ve vzduchu.<br>
+            </div>
+
+            <div class="pulka">
+                <h3 class="margin">Česnek(Blokátor Kouzel)</h3>
+                <img src="obrázky/Česnek.png" class="margin abox">
+                <video width="450" height="253" controls class="abox1 uu" loop>
+                    <source src="videa/Česnek.mp4" type="video/mp4">
+                </video>
+                <ul>
+                    <li>Cooldown: 8s</li>
+                </ul>
+                Vystřel česnek, ve kterém nechce zůstat žádná čarodějnice. Blízko něho se néda kouzlit, ani přeměňovat.
+                Česnek po 10 vteřinách zmizí.
+            </div>
+            <div class="pulka">
+                <h3 class="margin">Koule</h3>
+                <img src="obrázky/Koule.png" class="margin abox">
+                <video width="450" height="253" controls class="abox1 tt" loop>
+                    <source src="videa/Koule.mp4" type="video/mp4">
+                </video>
+                <ul>
+                    <li>Cooldown: 5s</li>
+                    <li>Damage: 8 - 16</li>
+                </ul>
+                Využij tvar svého těla a udělej ze sebe kouli, která je rychlá a hopsavá. Koulí zůstáváš, dokud se sám
+                nepřeměníš nebo nesebereš <a href="#houbicky" class="ruby">houbičky</a>.
+            </div>
+
+
+
+        </div>
+        <div id="witch" class="obsah rr">
+            <h2>Witch</h2>
+            Je čarodějnice, která má většinou za úkol se schovat a přežít. Ve většině módů se může měnit na předměty
+            (propy). Má rozmanitou sadu kouzel(spellů): <br>
+            <div class="pulka">
+                <h3 class="margin">Létání(Koště) </h3>
+                <img src="obrázky/Koště.png" class="margin abox">
+                <video width="450" height="253" controls class="abox1 uu" loop>
+                    <source src="videa/Letani.mp4" type="video/mp4">
+                </video>
+                <ul>
+                    <li>Aktivace: 2 many</li>
+                    <li>Mana za sekundu: 46m/s</li>
+                </ul>
+                Použij své magické koště na létání! Každý předmět je jinak těžký, to znamená že poletí jinak rychle.
+            </div>
+            <div class="pulka">
+                <h3 class="margin">Possess </h3>
+                <img src="obrázky/Posses.png" class="margin abox">
+                <video width="450" height="253" controls class="abox1 tt" loop>
+                    <source src="videa/Possess_2.mp4" type="video/mp4">
+                </video>
+                <ul>
+                    <li>Cooldown: 1,5s</li>
+                    <li>Aktivace: až 80 many</li>
+                </ul>
+                Ovládni předmět a staň se jím. Použitím se přesuneš na jeho místo. Počet konzumované many se mění dle
+                vzdálenosti.
+            </div>
+
+            <div class="pulka">
+                <h3 class="margin" id="houbicky">Houbičky </h3>
+                <img src="obrázky/Houbičky.png" class="margin abox">
+                <video width="450" height="253" controls class="abox1 uu" loop>
+                    <source src="videa/Houbicky.mp4" type="video/mp4">
+                </video>
+                <ul>
+                    <li>Cooldown: 3s</li>
+                    <li>Aktivace: 70 many</li>
+                </ul>
+                Vyhodí toxickou houbičku (jednu ze které vyletí další tři), kterými když projde lovec, tak ho to otráví
+                a
+                motá se. Tento efekt vydží na lovcovi 3 vteřiny. Po stoupnutí na houbičku, houbička zmizí. Každá
+                houbička vydrží 7 vteřin.
+            </div>
+            <div class="pulka">
+                <h3 class="margin">Luaq(Strašidlo)</h3>
+                <img src="obrázky/Luaq.png" class="margin abox ">
+                <video width="450" height="253" controls class="abox1 tt" loop>
+                    <source src="videa/Luaq.mp4" type="video/mp4">
+                </video>
+                <ul>
+                    <li>Cooldown: 1,5s</li>
+                    <li>Aktivace: 70 many</li>
+                </ul>
+                Vystřelí Luaqa, který jde pouze vidět čarodějnicemi (trochu ho můžou vidět lovci, ale jen málo). Luaq
+                zvyšuje jeho rychlost a vzdálenost, ve které může trefit lovce. Pokud trefí lovce, bude vylekán a
+                rozptýlen. Čím déle letí, tím déle bude na lovcovi (max 3s).
+            </div>
+
+            <div class="pulka">
+                <h3 class="margin"> Magické oko (Duch)</h3>
+                <img src="obrázky/Duch.png" class="margin abox">
+                <video width="450" height="253" controls class="abox1 uu" loop>
+                    <source src="videa/Duch.mp4" type="video/mp4">
+                </video>
+                <ul>
+                    <li>Aktivace: 20 many</li>
+                </ul>
+                Vyvolej mocné oko k volnému létání po celé mapě! Když použiješ tuto schopnost, čarodějnice zůstane na
+                stejném místě, jenom ty(jako kamera) se budeš hýbat. Když používáš oko, můžeš volně používat ostatní
+                schopnosti, ale mana se regeneruje pouze 50% rychlostí.
+            </div>
+            <div class="pulka">
+                <h3 class="margin">Decoy(Návnada)</h3>
+                <img src="obrázky/Decoy.png" class="margin abox">
+                <video width="450" height="253" controls class="abox1 tt" loop>
+                    <source src="videa/Decoy.mp4" type="video/mp4">
+                </video>
+                <ul>
+                    <li>Aktivace: 20 many</li>
+                    <li>Mana za sekundu: 3m/s</li>
+                </ul>
+                Čarodějnice může vyvolat a ovládat návnadu, čímž může zmást lovce.
+            </div>
+
+        </div>
+        <div id="gamemodes" class="obsah">
+            <h2>Herní módy</h2>
+            Je zde 6 různých módů:
+            <ul>
+                <!-- hodit na youtube videa -->
+                <li>
+                    <h3>Hide and Seek</h3>
+                </li>
+                Lovci musí chytit všechny čarodějnice, aby vyhráli kolo. Čarodějnice vyhrávají, když vyprší omezená doba
+                hledání. <br>
+                Ukázka: <br>
+                <video width="450" height="253" controls>
+                    <source src="videa/hidenseek tutorial-edit.mp4" type="video/mp4">
+                </video>
+
+                <li>
+                    <h3>Mobification</h3>
+                </li>
+                Podobné jako Hide And Seek, ale s tím rozdílem, že když lovec chytí čarodějnici, tak neumře, ale stává
+                se z ní Hunter. <br>
+                Ukázka: <br>
+                <video width="450" height="253" controls>
+                    <source src="videa/mobif tutorial-edit.mp4" type="video/mp4">
+                </video>
+
+
+                <li>
+                    <h3>Hunt a Hag</h3>
+                </li>
+                Speciální schopnosti jsou zakázány pro oba týmy a lovci mohou používat pouze svou zbraň na blízko (Melee
+                attack). Jinak režim funguje stejně jako Mobification. <br>
+                Ukázka: <br>
+                <video width="450" height="253" controls>
+                    <source src="videa/hunahag tutorial.mp4" type="video/mp4">
+                </video>
+
+
+                <li>
+                    <h3>Imposturous (WIP)</h3>
+                </li>
+                <!-- Imposturous dodelat tutorial (edit) -->
+
+
+                <li>
+                    <h3>Fill a Pot (WIP)</h3>
+                </li>
+                Týmy čarodějnic a lovců o stejném počtu(1v1, 2v2, atd) mezi sebou soutěží, aby naplnily nebo zabránily
+                třem z pěti magických kotlíků s dvěma určitými předměty. <br> To vyžaduje vysokou úroveň aktivity od
+                všech hráčů a
+                je proto odměněno více zkušenostními body než v jiných herních režimech. <br>
+                Ukázka: <br>
+                <video width="450" height="253" controls>
+                    <source src="videa/fillapot tutorial.mp4" type="video/mp4">
+                </video>
+
+
+                <li>
+                    <h3>Creative</h3>
+                </li>
+                Je mód, kde si každý může postavit mapu dle sebe. Tomuto módu moc nerozumím, takže tady je <a
+                    href="https://www.youtube.com/watch?v=f4_DLhoSKB0&ab_channel=TouCandyBober" target="_blank"
+                    class="ruby">tutoriál</a> od někoho jiného, pokud se chcete podívat a chcete se ho naučit. Pokud si
+                chcete zahrát nějaké custom mapy, tak můžete <a href="https://steamcommunity.com/app/559650/workshop/"
+                    class="ruby" target="_blank">zde</a>.
+            </ul>
+        </div>
+        <div id="mapy" class="obsah">
+            <h2>Mapy</h2>
+            <div class="ctvrt">
+                <h3><br> Snowbreeze <br></h3>
+                <img src="obrázky/Snowbreeze.png" class="margin">
+            </div>
+            <div class="ctvrt">
+                <h3> The Chummy Potato</h3>
+                <img src="obrázky/The_Chummy_Potato.png" class="margin">
+            </div>
+            <div class="ctvrt">
+                <h3><br> Grunewald Library <br></h3>
+                <img src="obrázky/Grunewald_Library.png" class="margin">
+            </div>
+            <div class="ctvrt">
+                <h3><br>Grunewald at Night <br></h3>
+                <img src="obrázky/Grunewald_at_Night.png" class="margin">
+            </div>
+
+
+            <div class="ctvrt">
+                <h3>Morgenstund</h3>
+                <img src="obrázky/Morgenstund.png" class="margin">
+            </div>
+            <div class="ctvrt">
+                <h3>Fiskersted</h3>
+                <img src="obrázky/Fiskersted.png" class="margin">
+            </div>
+            <div class="ctvrt">
+                <h3>Loakiki Paradise</h3>
+                <img src="obrázky/Loakiki_Paradise.png" class="margin">
+            </div>
+            <div class="ctvrt">
+                <h3>Kula Kula Islands</h3>
+                <img src="obrázky/Kula_Kula_Islands.png" class="margin">
+            </div>
+
+
+            <div class="ctvrt">
+                <h3>Sleeping Rose Cemetry</h3>
+                <img src="obrázky/Sleeping_Rose_Cemetry.png" class="margin">
+            </div>
+            <div class="ctvrt">
+                <h3><br> Twin Mask Theatre <br></h3>
+                <img src="obrázky/Twin_Mask_Theatre.png" class="margin">
+            </div>
+            <div class="ctvrt">
+                <h3><br> Shipwreck Hollow <br></h3>
+                <img src="obrázky/Shipwreck_Hollow.png" class="margin">
+            </div>
+            <div class="ctvrt">
+                <h3><br> Port Plunder <br></h3>
+                <img src="obrázky/Port_Plunder.png" class="margin">
+            </div>
+
+
+            <div class="ctvrt">
+                <h3>Cursed Ruins</h3>
+                <img src="obrázky/Cursed_Ruins.png" class="margin">
+            </div>
+            <div class="ctvrt">
+                <h3>Morgaryll Forest</h3>
+                <img src="obrázky/Morgaryll_Forest.png" class="margin">
+            </div>
+            <div class="ctvrt">
+                <h3>Twisted House</h3>
+                <img src="obrázky/Twisted_House.png" class="margin">
+            </div>
+            <div class="ctvrt">
+                <h3>Shard of Wiqqarra</h3>
+                <img src="obrázky/Shard_of_Wiqqarra.png" class="margin">
+            </div>
+
+
+            <div class="pulka pp">
+                <h3>Amara's Fountain</h3>
+                <img src="obrázky/Amaras_Fountain.png" class="margin">
+            </div>
+            <div class="pulka pp">
+                <h3>Flint Falls</h3>
+                <img src="obrázky/Flint_Falls.png" class="margin">
+            </div>
+
+        </div>
+        <div id="4" class="obsah">obsah4</div>
+    </div>
+</body>
+
+</html>
