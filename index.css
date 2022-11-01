@@ -1,0 +1,277 @@
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    scroll-margin: 10px;
+}
+
+body {
+    background-color: #010113;
+    margin: 0;
+}
+
+.celek {
+    background-color: #010113;
+    width: 100%;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.witchit {
+    display: block;
+    width: 60%;
+    margin: auto;
+}
+
+.menu {
+    top: -90px;
+    transition: 0.5s;
+    background-color: rgb(250, 110, 255);
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    float: left;
+    position: fixed;
+    border-radius: 0 0 10px 10px;
+    opacity: 75%;
+}
+
+.menu:hover {
+    top: 0;
+}
+
+.menuButton {
+    text-align: center;
+    width: 16.6666666%;
+    padding: 20px;
+    background-color: rgb(95, 0, 107);
+    border: 2px solid black;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: 1s;
+    color: cyan;
+    float: left;
+    font-weight: bold;
+    max-height: 80px;
+}
+
+.menuButton:hover {
+    background-color: purple;
+    transform: scale(0.95);
+}
+
+.obsah {
+    text-align: justify;
+    background-color: rgb(90, 48, 114);
+    width: 100%;
+    padding: 25px;
+    float: right;
+    color: #61ffe5;
+    border: 2px dashed lime;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.ruby {
+    color: rgb(255, 79, 123);
+}
+
+a {
+    text-decoration: none;
+}
+
+h2 {
+    text-decoration: underline;
+}
+
+.podmenu {
+    height: 80px;
+}
+
+.modes {
+    transition: 0.5s;
+    padding: 11px;
+}
+
+.pulka {
+    width: 50%;
+    float: left;
+    padding: 20px;
+    text-align: center;
+    transition: 0s;
+}
+
+.pulka2 {
+    width: 50%;
+    float: left;
+    padding: 20px;
+}
+
+.margin {
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+
+.abox {
+    opacity: 100%;
+}
+
+.abox1 {
+    position: absolute;
+    visibility: hidden;
+    border-radius: 10px;
+}
+
+.abox:hover~.abox1 {
+    visibility: visible;
+}
+
+.abox1:hover {
+    visibility: visible;
+}
+
+.oo {
+    transition: 0.5s;
+    opacity: 100%;
+}
+
+.qq {
+    color: rgb(231, 169, 53);
+}
+
+.rr {
+    color: rgb(30, 0, 54);
+}
+
+.ctvrt {
+    width: 25%;
+    text-align: center;
+    float: left;
+    border: 2px solid #4f2b64;
+    border-radius: 10px;
+}
+
+.pp {
+    border: 2px solid #4f2b64;
+    border-radius: 10px;
+}
+
+
+.ss {
+    transition: 0.5s;
+    opacity: 100%;
+}
+
+.tt {
+    right: 100px;
+}
+
+.uu {
+    left: 100px;
+}
+
+@media only screen and (max-width: 1560px) {
+    .pulka2 {
+        width: 100%;
+        left: 50%;
+    }
+
+}
+
+@media only screen and (max-width: 800px) {
+    .oo {
+        transition: 0s;
+        width: 95%;
+    }
+
+    .pulka {
+        transition: 0.5s;
+        width: 100%;
+    }
+
+    .abox1 {
+        left: 0;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .oo {
+        transition: 0.5s;
+        height: 300px;
+    }
+
+    .menu {
+        top: 0;
+        transition: 0.5s;
+        left: -110px;
+        height: 100%;
+        width: 120px;
+        background-color: rgb(250, 110, 255);
+        opacity: 75%;
+        border-radius: 0 10px 10px 0;
+    }
+
+    .menu:hover {
+        transition: 0.5s;
+        left: 0;
+    }
+
+    .menuButton {
+        padding: 10px;
+        transition: 0s;
+        width: 100px;
+        height: 16%;
+        line-height: 20px;
+    }
+
+    * {
+        scroll-margin: 0px;
+    }
+
+    .ss {
+        transition: 0.5s;
+        padding-top: 25px;
+    }
+
+    .modes {
+        transition: 0.5s;
+        padding-top: 20px;
+    }
+
+}
+
+@media only screen and (max-height:400px) {
+    .ss {
+        transition: 0.5s;
+        padding: 0;
+    }
+
+    .modes {
+        transition: 0.5s;
+        padding: 0;
+    }
+}
+
+@media only screen and (max-height:190px) {
+    .ss {
+        transition: 0.5s;
+        visibility: hidden;
+    }
+
+    .modes {
+        transition: 0.5s;
+        visibility: hidden;
+    }
+
+    .menu {
+        transition: 0.5s;
+        visibility: hidden;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .oo {
+        transition: 0.5s;
+        height: 230px;
+    }
+}
